@@ -22,7 +22,6 @@ class App extends Component {
       <div className="App">
         <ForumNav />
         <Home />
-        <Board />
         <Footer />
       </div>
     );

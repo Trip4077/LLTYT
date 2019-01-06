@@ -139,4 +139,25 @@ html {
 }
 html body {
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+.App .navbar {
+  padding: 10px 0;
+}
+.App .navbar .navbar-brand {
+  font-size: 1.8rem;
+  padding-left: 15px;
+}
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.6rem;
+  margin-right: 15px;
+}
+.dropdown-menu {
+  min-width: 0;
+  right: 18px;
+  left: auto;
+}
+.dropdown-menu button {
+  font-size: 1.4rem;
+  margin: 3px 0;
 }
