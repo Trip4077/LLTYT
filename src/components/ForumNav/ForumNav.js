@@ -24,7 +24,7 @@ class ForumNav extends React.Component {
         Data for personalized forums
         Requires All Forums at index 0, Dropwdown item at index 1,
       */
-      forumsMenu: ["All Forums", <DropdownItem divider />, "Web", "Data Science", "OS", "Python", "JavaScript"]
+      forumsMenu: ["All Forums", <DropdownItem key={1} divider />, "Web", "Data Science", "OS", "Python", "JavaScript"]
     }
   }
 
