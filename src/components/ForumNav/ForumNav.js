@@ -22,9 +22,9 @@ class ForumNav extends React.Component {
       loggedIn: false,
       /*
         Data for personalized forums
-        Requires Your Forums at index 0, Dropwdown item at index 1, all foruems at index 2
+        Requires All Forums at index 0, Dropwdown item at index 1,
       */
-      favorites: ["All Forums", <DropdownItem divider />, "Your List", "Web", "Data Science", "OS", "Python", "JavaScript"]
+      forumsMenu: ["All Forums", <DropdownItem divider />, "Web", "Data Science", "OS", "Python", "JavaScript"]
     }
   }
 
@@ -44,7 +44,7 @@ class ForumNav extends React.Component {
     }
 
     return(
-      <Navbar color="dark" dark expand="lg">
+      <Navbar  dark expand="lg">
 
         <NavbarBrand href="/">
           <p>Let's Learn Tech</p>
@@ -77,7 +77,14 @@ class ForumNav extends React.Component {
                 Forums
               </DropdownToggle>
               <DropdownMenu>
-                {this.state.favorites.map((genre, index) => <DropdownItem key={index}>{genre}</DropdownItem>)}
+                {this.state.forumsMenu.map((genre, index) => {
+                  /* Check if divider */
+                  if(index === 1) {
+                    return genre;
+                  }
+
+                  return <DropdownItem key={index}>{genre}</DropdownItem>
+                })}
               </DropdownMenu>
             </UncontrolledDropdown>
 

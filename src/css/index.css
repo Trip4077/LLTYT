@@ -138,26 +138,41 @@ html {
   font-size: 62.5%;
 }
 html body {
+  background-color: #040404;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 .App .navbar {
+  background: #d10e11;
+  background: radial-gradient(circle, rgba(209, 14, 17, 0.65) 0%, rgba(176, 19, 29, 0.65) 24%, rgba(94, 11, 11, 0.65) 68%, rgba(43, 6, 6, 0.65) 99%);
   padding: 10px 0;
 }
 .App .navbar .navbar-brand {
   font-size: 1.8rem;
   padding-left: 15px;
 }
-.navbar-nav .nav-item .nav-link {
-  font-size: 1.6rem;
+.nav-link {
+  font-size: 1.8rem;
   margin-right: 15px;
 }
-.dropdown-menu {
+#bootstrap-override .dropdown-menu {
   min-width: 0;
-  right: 18px;
+  top: 32px;
+  right: 14px;
   left: auto;
+  background-color: rgba(37, 33, 32, 0.5);
+  border: 1.5px solid #900000;
+  border-radius: 7px;
 }
-.dropdown-menu button {
-  font-size: 1.4rem;
-  margin: 3px 0;
+#bootstrap-override .dropdown-menu button {
+  font-size: 1.6rem;
+  color: white;
+  margin: 0 5px;
+  padding: 6px 7px;
+  transition: color 0.6s;
+}
+#bootstrap-override .dropdown-menu button:hover {
+  background-color: transparent;
+  color: red;
+  transition: color 0.6s;
 }
