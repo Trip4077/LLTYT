@@ -6,8 +6,6 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -35,6 +33,18 @@ class ForumNav extends React.Component {
     })
   }
 
+  toggleMenus = (event) => {
+
+    if (event.target.innerText === "Profile"){
+      //Get forum link and hide display
+      const tab = event.target.parentNode.parentNode.lastChild;
+      tab.classList.toggle('hidden');
+    } else {
+      const tab = event.target.parentNode.parentNode.firstChild;
+      tab.classList.toggle('hidden');
+    }
+  }
+
   render() {
     /* Used to switch switch sign in/out links */
     let log = "Sign In";
@@ -54,7 +64,7 @@ class ForumNav extends React.Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
 
-            <UncontrolledDropdown nav inNavbar>
+            <UncontrolledDropdown onClick={this.toggleMenus} nav inNavbar>
               <DropdownToggle nav caret>
                 Profile
               </DropdownToggle>
@@ -73,7 +83,7 @@ class ForumNav extends React.Component {
             </UncontrolledDropdown>
 
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle onClick={this.toggleMenus} nav caret>
                 Forums
               </DropdownToggle>
               <DropdownMenu>
